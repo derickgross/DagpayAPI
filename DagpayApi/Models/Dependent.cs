@@ -18,7 +18,5 @@ namespace DagpayApi.Models
 
         [Required]
         public string LastName { get; set; }
-
-        public Employee Employee { get; set; }
     }
 }

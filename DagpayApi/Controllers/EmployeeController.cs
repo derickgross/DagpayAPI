@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,12 +36,10 @@ namespace DagpayApi.Controllers
         public async Task<ActionResult<IEnumerable<Employee>>> GetEmployees()
         {
             //return await _context.Employees.ToListAsync();
-            var output =  await _context
+            return  await _context
                             .Employees
                             .Include("Dependents")
-                            .ToListAsync();
-
-            return output;
+                            .ToListAsync();                            
         }
 
         //GET: api/Employee/2
@@ -53,6 +52,10 @@ namespace DagpayApi.Controllers
             {
                 return NotFound();
             }
+
+            employee.Dependents = _context.Dependents.Where(d => d.EmployeeId == id).ToList();
+
+            Console.WriteLine(employee);
 
             return employee;
         }
