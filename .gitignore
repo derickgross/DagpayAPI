@@ -406,3 +406,4 @@ ASALocalRun/
 
 # app settings
 */appsettings.json
+*/app.config
