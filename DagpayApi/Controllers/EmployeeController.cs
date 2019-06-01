@@ -11,9 +11,9 @@ namespace DagpayApi.Controllers
     [ApiController]
     public class EmployeeController : ControllerBase
     {
-        private readonly EmployeeContext _context;
+        private readonly AzureDatabaseContext _context;
 
-        public EmployeeController(EmployeeContext context)
+        public EmployeeController(AzureDatabaseContext context)
         {
             _context = context;
 

@@ -11,9 +11,9 @@ namespace DagpayApi.Controllers
     [ApiController]
     public class DependentController : ControllerBase
     {
-        private readonly DependentContext _context;
+        private readonly AzureDatabaseContext _context;
 
-        public DependentController(DependentContext context)
+        public DependentController(AzureDatabaseContext context)
         {
             _context = context;
 

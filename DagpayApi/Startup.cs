@@ -21,8 +21,10 @@ namespace DagpayApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddDbContext<EmployeeContext>(opt => opt.UseInMemoryDatabase("Employees"));
-            services.AddDbContext<DependentContext>(opt => opt.UseInMemoryDatabase("Dependents"));
+            //services.AddDbContext<EmployeeContext>(options => options.UseInMemoryDatabase("Employees"));
+            //services.AddDbContext<DependentContext>(options => options.UseInMemoryDatabase("Dependents"));
+            services.AddDbContext<AzureDatabaseContext>(options =>
+                        options.UseSqlServer(Configuration.GetConnectionString("MyDbConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
