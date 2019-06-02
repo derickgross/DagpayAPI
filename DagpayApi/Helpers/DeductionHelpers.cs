@@ -6,7 +6,7 @@ namespace DagpayApi.Helpers
     {
         public static decimal CalculateDeduction(decimal cost, decimal discountFactor)
         {
-            return .01M * cost * discountFactor;
+            return Decimal.Round(((.01M * cost * discountFactor) / 26), 2, MidpointRounding.AwayFromZero);
         }
 
         public static int CalculateDiscountFactor(string firstName)

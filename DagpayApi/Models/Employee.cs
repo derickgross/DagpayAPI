@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using DagpayApi.Helpers;
 
 namespace DagpayApi.Models
 {
@@ -26,6 +27,15 @@ namespace DagpayApi.Models
 
         [Required]
         public int Cost { get; set; }
+
+        [Required]
+        public decimal Deduction 
+        {
+            get
+            {
+                return DeductionHelpers.CalculateDeduction(Cost, DiscountFactor);
+            }
+        }
 
         [Required]
         public int DiscountFactor { get; set; }
