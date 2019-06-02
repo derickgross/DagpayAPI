@@ -62,7 +62,8 @@ namespace DagpayApi.Controllers
         public async Task<ActionResult<Dependent>> CreateEmployee(Dependent dependent)
         {
             dependent.Cost = 500;
-            dependent.DiscountFactor = DeductionHelpers.CalculateDiscountFactor(employee.FirstName);
+            dependent.DiscountFactor = DeductionHelpers.CalculateDiscountFactor(dependent
+                .FirstName);
             _context.Dependents.Add(dependent);
             await _context.SaveChangesAsync();
 
