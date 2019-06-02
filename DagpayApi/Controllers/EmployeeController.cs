@@ -67,6 +67,9 @@ namespace DagpayApi.Controllers
         [HttpPost]
         public async Task<ActionResult<Employee>> CreateEmployee(Employee employee)
         {
+            employee.BiweeklySalary = 2000;
+            employee.Cost = 1000;
+            employee.DiscountFactor = DeductionHelpers.CalculateDiscountFactor(employee.FirstName);
             _context.Employees.Add(employee);
             await _context.SaveChangesAsync();
 
