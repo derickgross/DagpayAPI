@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DagpayApi.Models;
+using DagpayApi.Helpers;
 
 namespace DagpayApi.Controllers
 {
@@ -20,13 +21,15 @@ namespace DagpayApi.Controllers
 
             if (_context.Employees.Count() == 0)
             {
-                _context.Employees.Add(new Employee { 
+                _context.Employees.Add(new Employee {
                     FirstName = "Derick",
                     LastName = "Gross",
                     Department = "Development",
                     EmployeeId = 1,
                     Experience = 5,
-                    Cost = 1000
+                    Cost = 1000,
+                    BiweeklySalary = 2000,
+                    DiscountFactor = DeductionHelpers.CalculateDiscountFactor("Derick")
                 });
                 _context.SaveChanges();
             }
@@ -36,7 +39,6 @@ namespace DagpayApi.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Employee>>> GetEmployees()
         {
-            //return await _context.Employees.ToListAsync();
             return  await _context
                             .Employees
                             .Include("Dependents")
