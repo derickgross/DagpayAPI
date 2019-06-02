@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DagpayApi.Models
 {
@@ -21,6 +20,15 @@ namespace DagpayApi.Models
 
         [Required]
         public int Experience { get; set; }
+
+        [Required]
+        public int BiweeklySalary { get; set; }
+
+        [Required]
+        public int Cost { get; set; }
+
+        [Required]
+        public int DiscountFactor { get; set; }
 
         public List<Dependent> Dependents { get; set; }
     }

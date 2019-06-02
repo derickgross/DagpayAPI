@@ -25,7 +25,8 @@ namespace DagpayApi.Controllers
                     LastName = "Gross",
                     Department = "Development",
                     EmployeeId = 1,
-                    Experience = 5
+                    Experience = 5,
+                    Cost = 1000
                 });
                 _context.SaveChanges();
             }

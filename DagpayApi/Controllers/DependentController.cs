@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using DagpayApi.Models;
+using DagpayApi.Helpers;
 
 namespace DagpayApi.Controllers
 {
@@ -24,7 +25,9 @@ namespace DagpayApi.Controllers
                     DependentId = 1,
                     EmployeeId = 1,
                     FirstName = "DeAnna",
-                    LastName = "Gross"
+                    LastName = "Gross",
+                    Cost = 500,
+                    DiscountFactor = DeductionHelpers.CalculateDiscountFactor("DeAnna")
                 });
                 _context.SaveChanges();
             }

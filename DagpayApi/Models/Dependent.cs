@@ -18,5 +18,11 @@ namespace DagpayApi.Models
 
         [Required]
         public string LastName { get; set; }
+
+        [Required]
+        public int Cost { get; set; }
+
+        [Required]
+        public int DiscountFactor { get; set; }
     }
 }
