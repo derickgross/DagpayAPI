@@ -8,7 +8,9 @@ Dagpay React is hosted on Heroku:
 
 **_http://dagpay.herokuapp.com/_**
 
+View the code for Dagpay React here:
 
+**_https://github.com/derickgross/Dagpay-React_**
 
 The client has four sections:
 
