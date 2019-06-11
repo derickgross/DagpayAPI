@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
@@ -64,6 +65,7 @@ namespace DagpayApi.Controllers
         }
 
         //POST: api/Employee
+        [Authorize]
         [HttpPost]
         public async Task<ActionResult<Employee>> CreateEmployee(Employee employee)
         {
