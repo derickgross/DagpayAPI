@@ -54,7 +54,7 @@ namespace DagpayApi.Controllers
             {
                 User user = _userService.Create(userViewModel);
                 //return Ok();
-                return Created(user);
+                return Created("null", user);
             }
             catch (Exception ex)
             {
