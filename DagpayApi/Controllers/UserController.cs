@@ -53,7 +53,8 @@ namespace DagpayApi.Controllers
             try
             {
                 User user = _userService.Create(userViewModel);
-                return Created();
+                //return Ok();
+                return Created(user);
             }
             catch (Exception ex)
             {
