@@ -7,6 +7,17 @@ namespace DagpayApi.Models
 {
     public class Employee
     {
+        public Employee(string firstName, string lastName, int experience, string department, int cost = 1000, int biweeklySalary = 2000)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            Experience = experience;
+            Department = department;
+            Cost = cost;
+            BiweeklySalary = biweeklySalary;
+            DiscountFactor = DeductionHelpers.CalculateDiscountFactor(firstName);
+        }
+
         [Required]
         public int EmployeeId { get; set; }
 

@@ -1,7 +1,11 @@
-
+﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DagpayApi", "DagpayApi\DagpayApi.csproj", "{2F1EAFBF-1CBE-467F-A689-244CC2BECBC3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{3FB672DA-9F99-4C96-9F75-A7151438C5C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DagpayApi.Tests", "tests\DagpayApi.Tests\DagpayApi.Tests.csproj", "{E74C5638-1F90-4DEF-B837-BEFBBEE2E0B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,5 +17,12 @@ Global
 		{2F1EAFBF-1CBE-467F-A689-244CC2BECBC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F1EAFBF-1CBE-467F-A689-244CC2BECBC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F1EAFBF-1CBE-467F-A689-244CC2BECBC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E74C5638-1F90-4DEF-B837-BEFBBEE2E0B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E74C5638-1F90-4DEF-B837-BEFBBEE2E0B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E74C5638-1F90-4DEF-B837-BEFBBEE2E0B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E74C5638-1F90-4DEF-B837-BEFBBEE2E0B9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E74C5638-1F90-4DEF-B837-BEFBBEE2E0B9} = {3FB672DA-9F99-4C96-9F75-A7151438C5C1}
 	EndGlobalSection
 EndGlobal

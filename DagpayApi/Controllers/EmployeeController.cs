@@ -22,16 +22,7 @@ namespace DagpayApi.Controllers
 
             if (_context.Employees.Count() == 0)
             {
-                _context.Employees.Add(new Employee {
-                    FirstName = "Derick",
-                    LastName = "Gross",
-                    Department = "Development",
-                    EmployeeId = 1,
-                    Experience = 5,
-                    Cost = 1000,
-                    BiweeklySalary = 2000,
-                    DiscountFactor = DeductionHelpers.CalculateDiscountFactor("Derick")
-                });
+                _context.Employees.Add(new Employee("Derick", "Gross", 5, "Development"));
                 _context.SaveChanges();
             }
         }
