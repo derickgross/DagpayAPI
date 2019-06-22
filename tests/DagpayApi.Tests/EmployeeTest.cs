@@ -11,11 +11,12 @@ namespace DagpayApi.Tests
         {
             // Arrange
             Employee employee = new Employee("Derick", "Gross", 3, "Development");
+            decimal expectedDeduction = 38.46M;
 
             // Act
 
             // Assert
-            Assert.Equal("38.46", employee.Deduction.ToString());
+            Assert.Equal(expectedDeduction, employee.Deduction);
         }
     }
 }
