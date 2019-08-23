@@ -24,7 +24,7 @@ The client has four sections:
 
 ## Dagpay API
 
-Use the following endpoints to interact with the Dagpay C# Azure Functions API:
+Use the following endpoints to interact with the Dagpay C# API:
 
 **_https://dagpayapi.azurewebsites.net/api/employee_** - GET to get all employees (and their dependents), and POST to add a new employee
 
